@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor & Spice | Premium Food Ingredients</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4ADE80',
+                        secondary: '#FACC15',
+                        dark: '#1F2937',
+                        light: '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-dark">
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-dark">Savor & Spice</a>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="#featured" class="hover:text-primary transition-colors">Featured</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-dark hover:bg-gray-100 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 transition-all duration-300 ease-in-out">
+            <a href="#featured" class="block px-4 py-2 text-dark hover:bg-gray-100 transition-colors">Featured</a>
+            <a href="#about" class="block px-4 py-2 text-dark hover:bg-gray-100 transition-colors">About</a>
+            <a href="#contact" class="block px-4 py-2 text-dark hover:bg-gray-100 transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gray-100 py-16 sm:py-24 text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark leading-tight mb-4">
+                    Discover Quality Ingredients for Your Kitchen
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    From organic spices to artisanal flours, we provide the finest ingredients to elevate your culinary creations.
+                </p>
+                <a href="#featured" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-500 transition-all duration-300 transform hover:scale-105">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="featured" class="py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-dark mb-12">Featured Ingredients</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://placehold.co/400x300/FACC15/FFFFFF?text=Organic+Flour" alt="Organic Flour" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-dark mb-2">Organic All-Purpose Flour</h3>
+                        <p class="text-gray-600 mb-4">Sourced from the finest local farms, perfect for baking.</p>
+                        <span class="text-2xl font-extrabold text-primary">$5.99</span>
+                        <button class="block w-full mt-4 bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-green-500 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://placehold.co/400x300/4ADE80/FFFFFF?text=Local+Honey" alt="Local Honey" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-dark mb-2">Pure Local Honey</h3>
+                        <p class="text-gray-600 mb-4">Natural sweetness for your tea, desserts, and recipes.</p>
+                        <span class="text-2xl font-extrabold text-primary">$8.50</span>
+                        <button class="block w-full mt-4 bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-green-500 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <img src="https://placehold.co/400x300/1F2937/FFFFFF?text=Fresh+Herbs" alt="Fresh Herbs" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-dark mb-2">Fresh Rosemary Sprigs</h3>
+                        <p class="text-gray-600 mb-4">Hand-picked and aromatic, ideal for savory dishes.</p>
+                        <span class="text-2xl font-extrabold text-primary">$3.25</span>
+                        <button class="block w-full mt-4 bg-primary text-white font-bold py-2 px-4 rounded-full hover:bg-green-500 transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-gray-100 py-16 sm:py-24">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-dark mb-8">Our Mission</h2>
+                <p class="text-gray-600 text-lg text-center leading-relaxed">
+                    At Savor & Spice, we believe that great food starts with great ingredients. Our mission is to connect home cooks and professional chefs with a curated selection of high-quality, ethically-sourced food ingredients from around the world. We are passionate about quality, sustainability, and delicious flavor.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24">
+            <div class="container mx-auto px-4 max-w-xl">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-dark mb-8">Get In Touch</h2>
+                <form class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your Name">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="your@email.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-full shadow-lg hover:bg-green-500 transition-all duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Savor & Spice. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
